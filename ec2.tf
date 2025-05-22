@@ -1,12 +1,12 @@
 resource "aws_instance" "this" {
-  ami                     = "ami-0fc32db49bc3bfbb1"
-  instance_type           = "t2.micro"
+  ami                     = local.instance_ami
+  instance_type           = var.instance_type
 }
 
 
 resource "aws_instance" "import" {
-  ami                     = "ami-0fc32db49bc3bfbb1"
-  instance_type           = "t2.micro"
+  ami                     = local.instance_ami
+  instance_type           = var.instance_type
   tags = {
     Name = "terraform-import"
   }

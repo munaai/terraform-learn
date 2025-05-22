@@ -1,0 +1,15 @@
+# Terraform directories
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+
+# Ignore local override files and sensitive data
+*.tfvars
+*.tfvars.json
+
+# Ignore provider lock file (optional)
+.terraform.lock.hcl
+
+# Mac system files
+.DS_Store
